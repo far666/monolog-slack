@@ -1,6 +1,6 @@
 <?php
 include_once("../vendor/autoload.php");
-include_once("../init.php");
+include_once("../config.php");
 
 use \Monolog\Logger as Logger;
 use \Monolog\Handler\SlackHandler as SlackHandler;
@@ -11,7 +11,7 @@ try {
     //print_r($logger);
 
     //$slack_handler = new SlackbotHandler("ryansofar", SLACK_TOKEN, "#general");
-    $slack_handler = new SlackHandler(SLACK_TOKEN, "#general");
+    $slack_handler = new SlackHandler(SLACK_TOKEN, "#general", "bot");
     $slack_handler->setLevel(Logger::ERROR);
     $logger->pushHandler($slack_handler);
     //print_r($slack_handler);
