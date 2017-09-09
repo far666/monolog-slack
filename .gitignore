@@ -1,4 +1,5 @@
 vendor/*
 composer.lock
 config.php
-.sw?
+
+[._]*.sw[a-p]
